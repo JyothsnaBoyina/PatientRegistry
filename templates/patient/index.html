@@ -61,7 +61,7 @@
 
          <div class="form-group" ng-class="{ 'has-error': form.gender.$dirty && form.gender.$error.required }">
             <label for="gender">Gender</label>
-             <select id="gender" name="gender" ng-model="gend.value" ng-options="v for v in gend.values" required></select>
+             <select id="gender" name="gender" ng-model="gender" ng-options="v for v in gend.values" required></select>
             <span ng-show="form.gender.$invalid" >Gender is required</span>
         </div>
 
