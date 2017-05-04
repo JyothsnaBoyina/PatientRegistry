@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
-import dj_database_url
-db_from_env = dj_database_url.config()
+# import dj_database_url
+# db_from_env = dj_database_url.config()
 
 
 
@@ -30,13 +30,11 @@ SECRET_KEY = '5)rh9b$-%8ji+2cx)@2=^%e)5n_$#)a1hrsb&9nc+bhpp#rqf7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://patientregistry-dp.herokuapp.com/']
 
 REST_FRAMEWORK = {
 'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
-
 }
-
 
 # Application definition
 
@@ -61,6 +59,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'patient.views.DisableCSRF',
+    'patient.tz.TimezoneMiddleware',
+
 ]
 
 ROOT_URLCONF = 'Dataphi.urls'
@@ -90,19 +90,19 @@ WSGI_APPLICATION = 'Dataphi.wsgi.application'
 #DATABASES['default'].update(db_from_env)
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-
     # 'default': {
-    #
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'dq5qjv4g4fn8m',
-    #     'USER': 'zjwbnlandwgqoz',
-    #     'PASSWORD': 'EmafNF-oUbSlVEjt3vhh5X03-k',
-    #     'HOST': 'ec2-54-235-90-96.compute-1.amazonaws.com',
-    #     'PORT': '5432'
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dq5qjv4g4fn8m',
+        'USER': 'zjwbnlandwgqoz',
+        'PASSWORD': 'EmafNF-oUbSlVEjt3vhh5X03-k',
+        'HOST': 'ec2-54-235-90-96.compute-1.amazonaws.com',
+        'PORT': '5432'
 
         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # 'NAME': 'patient',
@@ -110,7 +110,7 @@ DATABASES = {
         # 'PASSWORD': 'system2',
         # 'HOST': 'localhost',
         # 'PORT': '5432'
-    # }
+    }
 
 }
 
@@ -154,19 +154,18 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-STATIC_ROOT=os.path.join((BASE_DIR),'staticfiles')
+STATIC_ROOT=os.path.join((BASE_DIR),'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
-DATABASES['default'] = dj_database_url.config()
+
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-DEBUG = False
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+#
+# DEBUG = False
+#
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
