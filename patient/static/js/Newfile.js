@@ -26,6 +26,7 @@ myApp.controller("myController", function ($scope,$http,$filter)
         $scope.gend = {
          "type": "select",
           "name": "gender",
+          "value": "MALE",
           "values": [ "MALE", "FEMALE", "OTHERS"]
   };
         
@@ -41,6 +42,7 @@ myApp.controller("myController", function ($scope,$http,$filter)
             else {
              var y = new Date(dob);
              $scope.age = Math.round((today - y)/(1000*60*60*24*365));
+                $scope.form.dob.$setValidity("dob", true);
             }
 
         };
