@@ -30,7 +30,9 @@ SECRET_KEY = '5)rh9b$-%8ji+2cx)@2=^%e)5n_$#)a1hrsb&9nc+bhpp#rqf7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://patientregistry-dp.herokuapp.com/']
+# ALLOWED_HOSTS = ['https://patientregistry-dp.herokuapp.com/']
+
+ALLOWED_HOSTS = ['*']
 
 REST_FRAMEWORK = {
 'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
