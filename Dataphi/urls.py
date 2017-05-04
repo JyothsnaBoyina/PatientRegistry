@@ -20,5 +20,5 @@ from patient import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^patients/', include('patient.urls')),
-    url(r'^/$', views.main),
+    url(r'^$', views.main),
 ]
