@@ -217,23 +217,23 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/patient/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="952">
               <caret line="108" column="80" selection-start-line="108" selection-start-column="80" selection-end-line="108" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Newfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Newfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/patient/static/js/Newfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
               <folding>
                 <element signature="e#58#176#0" expanded="false" />
                 <element signature="e#229#282#0" expanded="false" />
                 <element signature="e#853#1266#0" expanded="false" />
-                <element signature="e#1634#1877#0" expanded="false" />
+                <element signature="e#1568#1811#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -249,7 +249,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dataphi/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -305,9 +305,9 @@
         <option value="$PROJECT_DIR$/Dataphi/settings.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/templates/patient/index.html" />
-        <option value="$PROJECT_DIR$/patient/static/js/Newfile.js" />
         <option value="$PROJECT_DIR$/patient/urls.py" />
         <option value="$PROJECT_DIR$/Dataphi/urls.py" />
+        <option value="$PROJECT_DIR$/patient/static/js/Newfile.js" />
       </list>
     </option>
   </component>
@@ -768,7 +768,7 @@
             <element signature="e#58#176#0" expanded="false" />
             <element signature="e#229#282#0" expanded="false" />
             <element signature="e#853#1266#0" expanded="false" />
-            <element signature="e#1634#1877#0" expanded="false" />
+            <element signature="e#1568#1811#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,23 +962,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/patient/index.html">
+    <entry file="file://$PROJECT_DIR$/Dataphi/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="108" column="80" selection-start-line="108" selection-start-column="80" selection-end-line="108" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patient/static/js/Newfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        <state relative-caret-position="408">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#58#176#0" expanded="false" />
-            <element signature="e#229#282#0" expanded="false" />
-            <element signature="e#853#1266#0" expanded="false" />
-            <element signature="e#1634#1877#0" expanded="false" />
+            <element signature="e#640#680#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -991,12 +980,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dataphi/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/patient/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="952">
+          <caret line="108" column="80" selection-start-line="108" selection-start-column="80" selection-end-line="108" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patient/static/js/Newfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding>
-            <element signature="e#640#680#0" expanded="true" />
+            <element signature="e#58#176#0" expanded="false" />
+            <element signature="e#229#282#0" expanded="false" />
+            <element signature="e#853#1266#0" expanded="false" />
+            <element signature="e#1568#1811#0" expanded="false" />
           </folding>
         </state>
       </provider>

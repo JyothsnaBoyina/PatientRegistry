@@ -47,14 +47,14 @@ myApp.controller("myController", function ($scope,$http,$filter)
         };
 
         $scope.clear=function() {
-             // $scope.firstname=null;
-             // $scope.lastname=null;
-             // $scope.age=null;
-             // $scope.dob=null;
-             // $scope.gender=null;
-             // $scope.mobile=null;
-			 // $scope.comment=null;
-            $scope.form.$setPristine();
+             $scope.firstname='';
+             $scope.lastname='';
+             $scope.age=null;
+             $scope.dob='';
+             $scope.gender='MALE';
+             $scope.mobile=null;
+			 $scope.comment='';
+
 
          };
 
@@ -78,7 +78,7 @@ myApp.controller("myController", function ($scope,$http,$filter)
                "age": $scope.age, "dob": d,
                "gender": $scope.gender, "mobile": $scope.mobile, "comment": $scope.comment, "reg_date" :new Date()}),config);
 
-            $scope.form.$setPristine();
+            $scope.form.$setPristine(true);
 
              // $scope.firstname=null;
              // $scope.lastname=null;
