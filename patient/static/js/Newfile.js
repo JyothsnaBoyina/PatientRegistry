@@ -14,6 +14,7 @@ myApp.config(['$qProvider', function ($qProvider) {
 myApp.controller("myController", function ($scope,$http,$filter)
     {
         $scope.flag=true;
+        $scope.age=0;
 
         $scope.setflag=function()
         {                  
@@ -28,8 +29,7 @@ myApp.controller("myController", function ($scope,$http,$filter)
           "value": "MALE",
           "values": [ "MALE", "FEMALE", "OTHERS"]
   };
-        $scope.age=0;
-
+        
         $scope.chkdate=function (dob) {
             $scope.err='';
             var today=new Date();
@@ -46,16 +46,15 @@ myApp.controller("myController", function ($scope,$http,$filter)
 
         };
 
-        $scope.clear=function() {
+        $scope.clear=function()
+        {
              $scope.firstname='';
              $scope.lastname='';
-             $scope.age=null;
+             $scope.age=0;
              $scope.dob='';
              $scope.gender='MALE';
              $scope.mobile=null;
 			 $scope.comment='';
-
-
          };
 
         $scope.del=function(item) {
@@ -78,16 +77,13 @@ myApp.controller("myController", function ($scope,$http,$filter)
                "age": $scope.age, "dob": d,
                "gender": $scope.gender, "mobile": $scope.mobile, "comment": $scope.comment, "reg_date" :new Date()}),config);
 
-            $scope.form.$setPristine(true);
+             $scope.firstname='';
+             $scope.lastname='';
+             $scope.age=0;
+             $scope.dob='';
+             $scope.gender='MALE';
+             $scope.mobile=null;
+			 $scope.comment='';
 
-             // $scope.firstname=null;
-             // $scope.lastname=null;
-             // $scope.age=null;
-             // $scope.dob=null;
-             // $scope.gender=null;
-             // $scope.mobile=null;
-			 // $scope.comment=null;
-
-            $http.get('/patients/api/patient/?format=json').then(function(response){$scope.patients=response.data;});
         }
     });

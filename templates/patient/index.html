@@ -8,43 +8,19 @@
     <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/angular.js' %}"></script>
-   <script src="{% static 'js/Newfile.js' %}"></script>
+    <script src="{% static 'js/Newfile.js' %}"></script>
 
     <script>
-
         function mydob() {
     var x = document.getElementById("dob");
     x.setAttribute("type", "date");}
-
-         function myage() {
-    var x = document.getElementById("age");
-             var y1 = document.getElementById("dob").value;
-{#        var birth_date = new Date(y);#}
-{##}
-{#        var birth_year = y.getFullYear();#}
-{#        var birth_month = y.getMonth();#}
-{#        var calc_year = curr_year - birth_year;#}
-{#        var calc_month = curr_month - birth_month;#}
-{#             var age= calc_year+ (calc_month/10);#}
-{#             x.value=age;#}
-             var curDate = new Date();
-             var y = new Date(y1);
-             var difference = (curDate - y)/(1000*60*60*24*365);
-             x.value=difference.toFixed(1);
-
-         }
-
     </script>
 
-    <style>
-
-    </style>
+    <style></style>
 
 </head>
 
 <body>
-
-
 
 {% verbatim %}
 
@@ -148,9 +124,6 @@
     </tbody>
   </table>
   </div>
-
-
-
 
 </div>
 

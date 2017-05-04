@@ -1,14 +1,9 @@
 from rest_framework.decorators import api_view
 from patient.serializers import *
 from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
-from django.contrib.auth.models import User
-from rest_framework.response import Response
 from patient.views import CsrfExemptSessionAuthentication
 from rest_framework.authentication import BasicAuthentication
-from rest_framework.views import APIView
 from rest_framework.response import Response
 
 class JSONResponse(HttpResponse):
@@ -22,14 +17,12 @@ class JSONResponse(HttpResponse):
 
 @api_view(['GET', 'POST'])
 def patient_view1(request,format=None):
-    authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
     if request.method == 'GET':
         patients = Patients.objects.filter()
         serializer = PatientSerializer(patients,many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        #data = JSONParser().parse(request)
         serializer = PatientSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

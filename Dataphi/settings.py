@@ -86,11 +86,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Dataphi.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-#DATABASES['default'].update(db_from_env)
-
 DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -159,15 +154,4 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT=os.path.join((BASE_DIR),'static')
 STATIC_URL = '/static/'
 
-
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-#
-# DEBUG = False
-#
-# try:
-#     from .local_settings import *
-# except ImportError:
-#     pass

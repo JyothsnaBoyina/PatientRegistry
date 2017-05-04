@@ -1,14 +1,10 @@
-from django.shortcuts import render
 from django.shortcuts import  render_to_response
-
 from rest_framework.authentication import SessionAuthentication
-from rest_framework.authentication import BasicAuthentication
 from rest_framework.authentication import BasicAuthentication
 
 # Create your views here.
 
 class CsrfExemptSessionAuthentication(SessionAuthentication):
-
     def enforce_csrf(self, request):
         return
 
