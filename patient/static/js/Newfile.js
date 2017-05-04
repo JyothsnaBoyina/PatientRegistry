@@ -26,7 +26,6 @@ myApp.controller("myController", function ($scope,$http,$filter)
         $scope.gend = {
          "type": "select",
           "name": "gender",
-          "value": "MALE",
           "values": [ "MALE", "FEMALE", "OTHERS"]
   };
         
